@@ -3,6 +3,9 @@ import { useState, useCallback } from "react";
 
 import Connect from "./Connect";
 import LayoutSetting from "./layout-setting";
+import Preview from "./preview";
+import Instal from "./installation";
+import Template from "./template-layout";
 
 function Home() {
   const [selected, setSelected] = useState(0);
@@ -42,7 +45,10 @@ function Home() {
           <LegacyCard.Section>
            
             {selected===0 && <Connect />}
+            {selected===1 && <Template />}
             {selected===2&&<LayoutSetting/>}
+            {selected===3&&<Instal/>}
+
 
           </LegacyCard.Section>
           

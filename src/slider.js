@@ -1,43 +1,35 @@
-import Slider from "react-slick";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import './home.scss';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Slide from './slide';
 
 
-const SimpleSlider = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
+export default () => {
   return (
-    <div>
-      <h2> Simple Slider </h2>
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
-    </div>
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={20}
+      slidesPerView={3}
+      navigation
+      pagination={{ clickable: true }}
+        
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    
+    >
+      <SwiperSlide><Slide/></SwiperSlide>
+      <SwiperSlide><Slide/></SwiperSlide>
+      <SwiperSlide><Slide/></SwiperSlide>
+      <SwiperSlide><Slide/></SwiperSlide>
+      
+    </Swiper>
   );
 };
-
-export default SimpleSlider;
-
-
-

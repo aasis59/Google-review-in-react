@@ -1,18 +1,10 @@
 import { Text, LegacyCard, LegacyStack, Button } from "@shopify/polaris";
-import FormSection from "./layout-setting-form";
+import Preview from "./preview";
+import FromSection from "./layout-setting-form";
 function LayoutSetting() {
   return (
     <>
-      <div className=" section-slider mt-4 border ">
-        <div className="mt-2">
-          <Text variant="heading2xl" as="h2">
-            Preview
-          </Text>
-        </div>
-        <div className="mt-5">
-          <LegacyCard></LegacyCard>
-        </div>
-      </div>
+      <Preview/>
 
       <div className="section-slider-form mt-5 border-bottom border-dark pb-4">
         <LegacyStack>
@@ -30,7 +22,9 @@ function LayoutSetting() {
         </LegacyStack>
       
       </div>
-      <FormSection/>
+
+      <FromSection/>
+
      
     </>
   );

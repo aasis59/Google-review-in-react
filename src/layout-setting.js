@@ -1,4 +1,5 @@
 import { Text, LegacyCard, LegacyStack, Button } from "@shopify/polaris";
+import FormSection from "./layout-setting-form";
 function LayoutSetting() {
   return (
     <>
@@ -29,14 +30,8 @@ function LayoutSetting() {
         </LegacyStack>
       
       </div>
-      <div className="section-form mt-5">
-          <div className="container">
-<div className="row">
-    <div className="col">sadf</div>
-    <div className="col">asfas</div>
-    </div>          
-          </div>
-        </div>
+      <FormSection/>
+     
     </>
   );
 }

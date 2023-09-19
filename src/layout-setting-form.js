@@ -7,7 +7,7 @@ function FromSection() {
   const [selected, setSelected] = useState("today");
 
   const handleSelectChange = useCallback(
-    (value: string) => setSelected(value),
+    (value) => setSelected(value),
     []
   );
 

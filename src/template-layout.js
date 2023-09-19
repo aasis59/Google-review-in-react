@@ -1,4 +1,6 @@
 import Preview from "./preview";
+import PreviewThree from "./PreviewThree";
+import PreviewTwo from "./PreviewTwo";
 import { Text,Divider } from "@shopify/polaris";
 
 function Template() {
@@ -9,10 +11,35 @@ function Template() {
       </Text>
         </div>
       <Preview />
-     
+     <Divider borderColor="border" />
     </div>
+  <div className="mt-3">
+  <div>
+        <Text variant="headingLg" as="h2">
+        2.Review with Badge-II
+      </Text>
+        </div>
+      <PreviewTwo/>
+      
      <Divider borderColor="border" />
      
+  </div>
+
+  <div className="mt-3">
+    <div >
+  <Text variant="headingLg" as="h2">
+        3.Review with Badge-III
+      </Text>
+        </div>
+      <PreviewThree/>
+      
+     <Divider borderColor="border" /> 
+     
+  </div>
+    
+
+     
+
      </>
     
   );

@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-export default () => {
+export default  () => {
   return (
     <Swiper
       // install Swiper modules
@@ -29,6 +29,10 @@ export default () => {
       <SwiperSlide><Slide/></SwiperSlide>
       <SwiperSlide><Slide/></SwiperSlide>
       <SwiperSlide><Slide/></SwiperSlide>
+      <SwiperSlide><Slide/></SwiperSlide>
+      <SwiperSlide><Slide/></SwiperSlide>
+
+
       
     </Swiper>
   );

@@ -2,16 +2,17 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import Slide from "./slide";
-import "./slider.scss";
-import review from "./review.json";
+import Slide from "../Slide/slide";
+import './slidertwo.scss';
+import review from "../review.json";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 
-export default () => {
+
+const Slidertwo =  () => {
   const datas = review.data;
  
   return (
@@ -46,3 +47,4 @@ export default () => {
     </div>
   );
 };
+export default Slidertwo;

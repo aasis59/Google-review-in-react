@@ -1,5 +1,5 @@
 import { Text, LegacyCard, LegacyStack, Button } from "@shopify/polaris";
-import Preview from "./preview";
+import Preview from "../Connect/preview";
 import FromSection from "./layout-setting-form";
 function LayoutSetting() {
   return (

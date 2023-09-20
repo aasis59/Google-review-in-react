@@ -5,11 +5,12 @@ import {
     Text,
     LegacyCard,
   } from "@shopify/polaris";
-  import Footer from "./footer";
-  import Slider from "./slider";
+  
+  
   import { AiFillStar } from "react-icons/ai";
+import SliderOne from "../Slider/SliderOne";
 
-function Preview()
+function PreviewOne()
 {
     return(
     <>
@@ -44,7 +45,7 @@ function Preview()
               </div>
             </div>
             <div className="col-9">
-              <Slider />
+              <SliderOne />
             </div>
           </div>
         </div>
@@ -55,4 +56,4 @@ function Preview()
 
 
 }
-export default Preview;
+export default PreviewOne;

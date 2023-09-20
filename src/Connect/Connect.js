@@ -6,10 +6,10 @@ import {
   LegacyCard,
 } from "@shopify/polaris";
 import Footer from "./footer";
-import Slider from "./slider";
+import Slider from "../Slider/Slidertwo";
 import { AiFillStar } from "react-icons/ai";
 import Preview from "./preview";
-import review from "./review.json";
+import review from "../review.json";
 
 function Connect() {
   const dataone = review.company[0];

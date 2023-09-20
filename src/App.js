@@ -1,5 +1,5 @@
 import { AppProvider} from "@shopify/polaris";
-import Home from "./Home";
+import Home from "./Home/Home";
 
 function App() {
   return( 

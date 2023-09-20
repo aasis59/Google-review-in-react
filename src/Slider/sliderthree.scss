@@ -1,0 +1,18 @@
+.swiper-section {
+    position: relative;
+    .swiper3-prev {
+      position: absolute;
+      color: black;
+      left: -30px;
+    }
+    .swiper3-next {
+      position: absolute;
+      color: black;
+      right: -30px;
+    }
+    .swiper3-page {
+      position: absolute;
+      color: black !important;
+      bottom: -20px !important;
+    }
+  }

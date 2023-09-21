@@ -1,7 +1,7 @@
 import { Page, Grid, LegacyCard, Select } from "@shopify/polaris";
 import { useState, useCallback } from "react";
 import './layout.scss';
-import ChoiceSection from "./Choice";
+import {ChoiceSection} from "./Choice";
 
 function FromSection() {
   const [selected, setSelected] = useState("today");

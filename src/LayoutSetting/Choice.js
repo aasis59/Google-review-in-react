@@ -1,13 +1,24 @@
 import {ChoiceList} from '@shopify/polaris';
-import {useState, useCallback,createContext,} from 'react';
+import {useState, useCallback,useContext} from 'react';
+import { AppContext } from '../contextapi';
 
-const CardContext = createContext();
- export function ChoiceSection({children}) {
-  const [selected, setSelected] = useState(['hidden']);
-  const handleChange = useCallback((value) => setSelected(value), []);
+
+
+ export function ChoiceSection() {
+  const {setUsers}=useContext(AppContext);
+ 
+  const [selected, setSelected] = useState([]);
+
+  const handleChange = useCallback((value) => 
+    setSelected(value), 
+  
+  []);
+  setUsers(selected);
+ 
+  
 
   return (
-    <CardContext.Provider value={{selected}}>
+   
      
     <ChoiceList
       allowMultiple
@@ -25,22 +36,22 @@ const CardContext = createContext();
         
          
         }, {
-            label: 'Show Reviewers Photo',
+            label: 'Hide Reviewers Photo',
             value: 'value-03'
           
            
           }, {
-            label: 'Show Reviewers Name',
+            label: 'Hide Reviewers Name',
             value: 'value-04'
           
            
           }, {
-          label: 'Show View All Reviews Link',
+          label: ' Hide View All Reviews Link',
           value: 'value-05'
         
          
         },{
-            label: 'Show Write a Review Button',
+            label: 'Hide Write a Review Button',
             value: 'value-06'
           
            
@@ -56,8 +67,7 @@ const CardContext = createContext();
       ]}
       selected={selected}
       onChange={handleChange}
-    /> </CardContext.Provider>
+    /> 
   );
 }
 
-export default CardContext;

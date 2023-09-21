@@ -9,9 +9,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { AppContext } from "../contextapi";
+import { useContext } from "react";
 
 
 const SliderOne =  () => {
+  const {users}=useContext(AppContext);
   const datas = review.data;
  
   return (
@@ -33,9 +36,17 @@ const SliderOne =  () => {
         }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
-      >  {datas.map((card)=>( <SwiperSlide> 
+      > 
+      {users.includes("value-01") ? (
+               datas.map((card)=>(  card.description !== "" && <SwiperSlide> 
+                <Slide key={card.id} item={card} />
+              </SwiperSlide> ))
+            ) : (
+              datas.map((card)=>( <SwiperSlide> 
           <Slide key={card.id} item={card} />
-        </SwiperSlide> ))}
+        </SwiperSlide> ))
+            )}
+      
        
        
       </Swiper>

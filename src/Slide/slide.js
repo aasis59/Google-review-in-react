@@ -1,9 +1,12 @@
 import "./slide.scss";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillStar } from "react-icons/ai";
-import { useState } from "react";
+
+
 
 function Slide({item}) {
+  
+ ;
   const comment = item.description;
   return (
     <>

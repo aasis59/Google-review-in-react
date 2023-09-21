@@ -5,6 +5,7 @@ import App from './App';
 import "@shopify/polaris/build/esm/styles.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ChoiceSection } from './LayoutSetting/Choice';
 
 
 
@@ -13,7 +14,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ChoiceSection><App /></ChoiceSection>
+
   </React.StrictMode>
 );
 

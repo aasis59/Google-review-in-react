@@ -1,16 +1,18 @@
 import {ChoiceList} from '@shopify/polaris';
-import {useState, useCallback} from 'react';
+import {useState, useCallback,createContext,} from 'react';
 
-function ChoiceSection() {
+const CardContext = createContext();
+ export function ChoiceSection({children}) {
   const [selected, setSelected] = useState(['hidden']);
-
   const handleChange = useCallback((value) => setSelected(value), []);
 
   return (
+    <CardContext.Provider value={{selected}}>
+     
     <ChoiceList
       allowMultiple
       
-      choices={[
+      choices={[ 
         {
           label: 'Hide Reviews without Comments',
           value: 'value-01'
@@ -54,8 +56,8 @@ function ChoiceSection() {
       ]}
       selected={selected}
       onChange={handleChange}
-    />
+    /> </CardContext.Provider>
   );
 }
 
-export default ChoiceSection;
+export default CardContext;

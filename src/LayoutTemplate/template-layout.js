@@ -11,7 +11,7 @@ function Template() {
         1.Review with Badge-I
       </Text>
         </div>
-      <PreviewOne />
+      <PreviewOne/>
      <Divider borderColor="border" />
     </div>
   <div className="mt-3">
